@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* HEADER */
+.header-content {
+    background: linear-gradient(to bottom, #0A1A2F, #0F2C4C);
+    padding: 4rem;
+    text-align: center;
+    border-bottom: 2px solid #4ADE80;
+    color: #ffffff;
+}
+
+.header-content h1 {
+    background: linear-gradient(to right, #4ADE80, #22D3EE);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-content p {
+    font-size: 1.4rem;
+    color: #B6D8F2;
+}
+
+/* SECTION */
+section {
+    background: linear-gradient(to bottom, #081426, #0B2545);
+    padding: 4rem 2rem;
+    min-height: 65vh;
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    align-items: center;
+}
+
+/* BOX (PLANOS) */
+.plano {
+    background: linear-gradient(135deg, #0F2C4C, #123A63);
+    border: 2px solid #4ADE80;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: left;
+    width: 63%;
+    min-height: 450px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plano:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 22px rgba(34, 211, 238, 0.35);
+}
+
+/* TÍTULOS */
+.plano h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.plano h3 {
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.4rem;
+    color: #4ADE80;
+}
+
+/* LISTA */
+.plano ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plano li {
+    padding: 0.3rem 0.5rem;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        rgba(74, 222, 128, 0.18),
+        rgba(34, 211, 238, 0.12)
+    );
+    border-radius: 10px;
+    border-left: 4px solid #4ADE80;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.plano li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #4ADE80, #22D3EE);
+    color: #081426;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.plano li:hover {
+    transform: translateX(8px);
+    background: linear-gradient(
+        135deg,
+        rgba(74, 222, 128, 0.28),
+        rgba(34, 211, 238, 0.22)
+    );
+    border-left-color: #22D3EE;
+    box-shadow: 0 4px 12px rgba(34, 211, 238, 0.35);
+}
+
+/* BOTÃO */
+.btn-voltar {
+    display: inline-flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin: 1.5rem;
+    background: linear-gradient(135deg, #4ADE80, #0F2C4C);
+    color: #081426;
+    border: 2px solid #4ADE80;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.4);
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(135deg, #0F2C4C, #4ADE80);
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(34, 211, 238, 0.55);
+}
+
+.btn-voltar:active {
+    transform: translateX(-3px);
+}
+
+footer {
+    background: linear-gradient(to top, #0A1A2F, #0F2C4C);
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem;
+    border-top: 2px solid #ff9800;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container {
+        padding: 2.5rem 4rem;
+        gap: 4rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-right: 0;
+    }
+
+    .plano {
+        width: 100%;
+        min-height: auto;
+        padding: 1.5rem;
+    }
+
+    .plano h2 {
+        font-size: 1.5rem;
+    }
+
+    .plano h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn-voltar {
+        position: absolute;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+        margin: 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 1rem 0.9rem;
+        gap: 1.5rem;
+    }
+
+    .plano {
+        width: 94%;
+        padding: 1rem;
+        min-height: auto;
+        border-radius: 12px;
+    }
+
+    .plano h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .plano h3 {
+        font-size: 1rem;
+        margin: 1rem 0 0.8rem 0;
+    }
+
+    .plano li {
+        padding: 0.25rem 0.8rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.95rem;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+
+    .btn-voltar {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .header-content {
+        padding: 60px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        gap: 1.2rem;
+    }
+
+    .plano {
+        width: 76%;
+        padding: 2rem;
+    }
+
+    .plano h2 {
+        font-size: 1.1rem;
+    }
+
+    .plano h3 {
+        font-size: 0.95rem;
+    }
+
+    .plano li {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .btn-voltar {
+        position: fixed;
+        top: 0.8rem;
+        left: 0.8rem;
+        z-index: 1000;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    section {
+        padding: 1rem 0.8rem;
+    }
+}

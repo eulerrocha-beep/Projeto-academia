@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.header-content {
+    background: linear-gradient(to bottom, #0f1f17, #1f3d2b);
+    padding: 4rem;
+    text-align: center;
+    border-bottom: 2px solid #8bc34a;
+    color: #ffffff;
+}
+
+.header-content h1 {
+    background: linear-gradient(to right, #cddc39, #8bc34a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-content p {
+    font-size: 1.4rem;
+    color: #b7d6c1;
+}
+
+section {
+    background: linear-gradient(to bottom, #0f1f17, #1f3d2b);
+    padding: 4rem 2rem;
+    min-height: 65vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.treino {
+    background: linear-gradient(135deg, #1f3d2b, #2e5a3f);
+    border: 2px solid #8bc34a;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: left;
+    width: 63%;
+    min-height: 450px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.treino:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.treino h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.treino h3 {
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.4rem;
+    color: #cddc39;
+}
+
+.treino ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.treino li {
+    padding: 0.3rem 0.5rem;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        rgba(139, 195, 74, 0.18),
+        rgba(205, 220, 57, 0.12)
+    );
+    border-radius: 10px;
+    border-left: 4px solid #8bc34a;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.treino li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #8bc34a, #cddc39);
+    color: #1f3d2b;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.treino li:hover {
+    transform: translateX(8px);
+    background: linear-gradient(
+        135deg,
+        rgba(139, 195, 74, 0.28),
+        rgba(205, 220, 57, 0.18)
+    );
+    border-left-color: #cddc39;
+    box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
+}
+
+.btn-voltar {
+    display: inline-flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin: 1.5rem;
+    background: linear-gradient(135deg, #8bc34a, #2e5a3f);
+    color: #ffffff;
+    border: 2px solid #8bc34a;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 195, 74, 0.35);
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(135deg, #2e5a3f, #8bc34a);
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(139, 195, 74, 0.5);
+}
+
+.btn-voltar:active {
+    transform: translateX(-3px);
+}
+
+/* --- Footer --- */
+
+footer {
+    background: linear-gradient(
+        to bottom,
+        #0f1f17,
+        #1f3d2b
+    );
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem;
+    border-top: 2px solid #8bc34a;
+}
